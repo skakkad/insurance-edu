@@ -29,7 +29,7 @@ const insuranceList = () => {
       <Header />
       <VStack>
         <Heading textAlign="center" as="h1" size="2xl" mt={7} mb={2.5}>
-          List of Insurances
+          List of Insurancesz
         </Heading>
         <HStack>
           <Image src="/insurance.png" alt="insurance" width={75} height={75} />
