@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { Button, Box, Heading, VStack } from "@chakra-ui/react";
+import { Button, Box, Heading, VStack, paragraph } from "@chakra-ui/react";
 //import Header from "../components/Header"
 
 const LookingFor = () => {
@@ -39,8 +39,12 @@ const LookingFor = () => {
           mb={5}
           ml={7}
           size="lg"
+          width="220px"
+          height="100px"
         >
-          No, I need more help figuring out the best fit for me.
+          No, I need more help <br />
+          figuring out the <br />
+          best fit for me.
         </Button>
       </VStack>
     </Box>
