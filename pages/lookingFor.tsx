@@ -39,8 +39,10 @@ const LookingFor = () => {
           mb={5}
           ml={7}
           size="lg"
+          width="220px"
+          height="100px"
         >
-          No, I need more help figuring out the best fit for me.
+          No, I need more help <br /> figuring out the <br /> best fit for me.
         </Button>
       </VStack>
     </Box>
