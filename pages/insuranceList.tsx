@@ -21,7 +21,10 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
+import ZipCodeInput from "../components/ZipCodeInput";
 import Header from "../components/Header";
+
+
 
 const insuranceList = () => {
   return (
@@ -284,7 +287,7 @@ const insuranceList = () => {
         </AccordionPanel>
       </AccordionItem>
       <Center>
-        <Link
+      <Link
           href="https://www.statefarm.com/agent/?zipCode=52242"
           target="_blank"
         >
