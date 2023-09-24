@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import Link from "next/link";
+import ZipCodeInput from "./ZipCodeInput";
+
 import {
   Box,
   Button,
@@ -9,9 +12,8 @@ import {
   VStack,
   Center,
   useColorModeValue,
-  Stack,
+  Progress,
 } from "@chakra-ui/react";
-import Link from "next/link";
 
 interface Question {
   question: string;
@@ -31,6 +33,7 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [nextClicked, setNextClicked] = useState(false);
   const [submitClicked, setSubmitClicked] = useState(false);
+  const progress = ((currentQuestion + 1) / questions.length) * 100;
 
   const handleOptionChange = (value: string) => {
     setSelectedOption(value);
@@ -73,6 +76,13 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
 
   const bgColor = useColorModeValue("white", "gray.800");
 
+  const [storedZipCode, setStoredZipCode] = useState("");
+
+  const handleSaveZipCode = (zipCode) => {
+    // You can store the zipCode in your state, local storage, or send it to a server.
+    setStoredZipCode(zipCode);
+  };
+
   return (
     <VStack spacing={6} align="center">
       <Box
@@ -84,6 +94,16 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
         boxShadow="md"
         bg={bgColor}
       >
+        <text>Progress: {progress}%</text>
+        <Progress
+          mt={1}
+          mb={4}
+          value={progress}
+          size="sm"
+          colorScheme="red"
+          width="100%"
+        />
+
         <Heading as="h1" size="lg" mb={4}>
           Learn More About Renters Insurance
         </Heading>
@@ -151,14 +171,19 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
             <Text mb={4}>
               Yay! You finished learning all about renters insurance.
             </Text>
-            <Link
+
+            <ZipCodeInput onSave={handleSaveZipCode} />
+            {/* {storedZipCode && <p>Stored Zip Code: {storedZipCode}</p>} */}
+
+            {/* <Link
               href="https://www.statefarm.com/agent/?zipCode=52242"
               target="_blank"
             >
               <Button mt={4} colorScheme="red" size="md">
                 Talk to an agent!
               </Button>
-            </Link>
+            </Link> */}
+
             <Link href="/insuranceList">
               <Button mt={4} colorScheme="red" size="md">
                 Learn more about each type of insurance!
