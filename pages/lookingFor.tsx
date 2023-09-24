@@ -7,8 +7,8 @@ const LookingFor = () => {
   const router = useRouter();
 
   const handleYesClick = () => {
-    // If the user clicks "Yes," navigate to the "YesPage"
-    router.push("/yesPage");
+    // If the user clicks "Yes," navigate to the "insuranceList"
+    router.push("/insuranceList");
   };
 
   const handleNoClick = () => {
