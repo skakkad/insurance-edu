@@ -29,7 +29,7 @@ const insuranceList = () => {
       <Header />
       <VStack>
         <Heading textAlign="center" as="h1" size="2xl" mt={7} mb={2.5}>
-          List of Insurancesss
+          List of Insurances
         </Heading>
         <HStack>
           <Image src="/insurance.png" alt="insurance" width={75} height={75} />
@@ -165,11 +165,13 @@ const insuranceList = () => {
                     </PopoverContent>
                   </Popover>
                 </Box>
-                <Link href="/quizPage">
-                  <Button ml={20} colorScheme="red" size="md">
-                    Take our quiz to learn more about renters insurance!
-                  </Button>
-                </Link>
+                <Box alignSelf={"right"}>
+                  <Link href="/quizPage">
+                    <Button colorScheme="red" size="md">
+                      Take our quiz to learn more about renters insurance!
+                    </Button>
+                  </Link>
+                </Box>
               </HStack>
             </AccordionPanel>
           </AccordionItem>
@@ -227,10 +229,100 @@ const insuranceList = () => {
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              The best car insurance for young adults always comes down to
+              individual needs. If you drive your vehicle frequently – to and
+              from work or school – it may be wise to have more protection than
+              if you only drive your vehicle on the weekends. That means having
+              coverage that could help reimburse you for repairs if you’re in an
+              accident, as opposed to the bare minimum coverage, which helps
+              protect the other driver if you’re at fault. There are ways to
+              keep costs down, too, regardless of whether you’re a young or new
+              driver. The safer your vehicle is, for instance, the more you’re
+              likely to save. Insurers like when your vehicle has a high
+              crashworthiness rating, safety equipment and anti-theft devices,
+              all of which could help lower your rate or land you auto
+              discounts.
+              <br />
+              <br />
+              <HStack spacing={50}>
+                <Box>
+                  <Popover
+                    trigger="hover"
+                    // hoverOpenDelay={100}
+                    // hoverCloseDelay={100}
+                    isLazy
+                  >
+                    <PopoverTrigger>
+                      <Button>Collison Insurance</Button>
+                    </PopoverTrigger>
+                    <PopoverContent>
+                      <PopoverArrow />
+                      <PopoverCloseButton />
+                      {/* <PopoverHeader> Confirmation! </PopoverHeader> */}
+                      <PopoverBody textAlign={"left"}>
+                        Collision coverage pays to fix/replace a car that's been
+                        damaged in a collision with another object, or if it
+                        rolls over.
+                      </PopoverBody>
+                      <PopoverBody textAlign={"center"}>
+                        Damage from sources like these aren't covered by
+                        collision insurance:
+                      </PopoverBody>
+                      <PopoverBody textAlign={"left"}>
+                        · Theft <br /> · Falling or flying objects <br /> ·
+                        Flood <br /> · Hail <br /> · Fire <br /> · Hitting or
+                        being hit by an animal <br /> · Natural disasters <br />
+                        · Storms <br /> · Vandalism
+                        <br />
+                      </PopoverBody>
+                    </PopoverContent>
+                  </Popover>
+                </Box>
+                <Box>
+                  <Popover
+                    trigger="hover"
+                    // hoverOpenDelay={100}
+                    // hoverCloseDelay={100}
+                    isLazy
+                  >
+                    <PopoverTrigger>
+                      <Button>Comprehensive Insurance</Button>
+                    </PopoverTrigger>
+                    <PopoverContent>
+                      <PopoverArrow />
+                      <PopoverCloseButton />
+                      {/* <PopoverHeader> Confirmation! </PopoverHeader> */}
+                      {/* <PopoverBody textAlign={"center"}>
+                    Assess your liability:
+                  </PopoverBody> */}
+                      <PopoverBody textAlign={"left"}>
+                        Comprehensive coverage pays to repair/replace a covered
+                        vehicle that's stolen or damaged by something other than
+                        collision or rolling over.
+                      </PopoverBody>
+                      <PopoverBody textAlign={"center"}>
+                        Many young adults do not need comprehensive insurance.
+                        Consider the following factors to determine if it is
+                        really necessary for you:
+                      </PopoverBody>
+                      <PopoverBody textAlign={"left"}>
+                        · Is your car a high-value vehicle? <br /> · Do you live
+                        in an area prone to weather-related disasters?
+                        <br /> · Is there a high rate of car theft where you
+                        live? <br /> · How much can you afford to pay, or are
+                        willing to pay, out of your own pocket if you experience
+                        an accident that isn’t covered by collision insurance?
+                        <br />
+                      </PopoverBody>
+                    </PopoverContent>
+                  </Popover>
+                </Box>
+                <Box alignSelf={"right"}>
+                  <Button colorScheme="red" size="md">
+                    Take our quiz to learn more about car insurance!
+                  </Button>
+                </Box>
+              </HStack>
             </AccordionPanel>
           </AccordionItem>
           <AccordionItem ml={2} mr={2}>
