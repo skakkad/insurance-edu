@@ -17,6 +17,7 @@ import {
   PopoverFooter,
   PopoverArrow,
   PopoverCloseButton,
+  Center,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
@@ -164,6 +165,11 @@ const insuranceList = () => {
                     </PopoverContent>
                   </Popover>
                 </Box>
+                <Link href="/quizPage">
+                  <Button ml={20} colorScheme="red" size="md">
+                    Take our quiz to learn more about renters insurance!
+                  </Button>
+                </Link>
               </HStack>
             </AccordionPanel>
           </AccordionItem>
@@ -211,10 +217,38 @@ const insuranceList = () => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          <AccordionItem ml={2} mr={2}>
+            <h2>
+              <AccordionButton _expanded={{ bg: "mistyrose", color: "black" }}>
+                <Box as="span" flex="1" textAlign="left">
+                  Car Insurance
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </AccordionPanel>
+          </AccordionItem>
+          <AccordionItem ml={2} mr={2}>
+            <h2>
+              <AccordionButton _expanded={{ bg: "mistyrose", color: "black" }}>
+                <Box as="span" flex="1" textAlign="left">
+                  Motorcycle Insurance
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </AccordionPanel>
+          </AccordionItem>
         </AccordionPanel>
       </AccordionItem>
       <AccordionItem ml={7} mr={7}>
@@ -249,6 +283,16 @@ const insuranceList = () => {
           aliquip ex ea commodo consequat.
         </AccordionPanel>
       </AccordionItem>
+      <Center>
+        <Link
+          href="https://www.statefarm.com/agent/?zipCode=52242"
+          target="_blank"
+        >
+          <Button mt={5} mb={10} colorScheme="red" size="md">
+            Talk to an agent!
+          </Button>
+        </Link>
+      </Center>
     </Accordion>
   );
 };

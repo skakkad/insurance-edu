@@ -9,7 +9,6 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import Header from "../components/Header";
-import aptIcon from "../public/aptIcon.png";
 import Image from "next/image";
 
 const Situation = () => {
@@ -20,7 +19,7 @@ const Situation = () => {
         Which of the following applies to you:
       </Heading>
       <VStack spacing={8} align={"center"}>
-        <Link href="/quiz/option1">
+        <Link href="/quizPage">
           <HStack alignItems={"center"}>
             <Image
               src="/aptIcon.png"
